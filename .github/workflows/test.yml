@@ -1,13 +1,13 @@
 name: Test Project
-on: push 
+on: push # Trigger
 jobs:
   test:
-    runs-on: ubutu-latest 
+    runs-on: ubuntu-latest # Environment (Hint: Environments don't have access to your code automatically, you will have to specify it to it in a step.)
     steps:
       - name: Get code
-        uses: actions/checkout@v6 
+        uses: actions/checkout@v3 # action (You specify the action using "uses:" followed by the name of the action from the actoin marketplace.)
       - name: Install NodeJs
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Install dependencies
