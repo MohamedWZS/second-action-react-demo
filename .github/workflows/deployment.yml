@@ -1,5 +1,5 @@
 name: Test Project
-on: push # Trigger
+on: [push, workflow_dispatch] # Using multiple Triggers
 jobs:
   test:
     runs-on: ubuntu-latest # Environment (Hint: Environments don't have access to your code automatically, you will have to specify it to it in a step.)
